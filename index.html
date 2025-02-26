@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
     <style>
-        /* Add the footer styling from the previous response here */
+        /* Existing footer styling */
         .footer {
             background-color: white;
             padding: 20px;
@@ -47,10 +47,10 @@
             padding-top: 20px;
             color: #777;
         }
-        
-        /* Add styling for the Upcoming Events section */
+
+        /* Existing Upcoming Events styling */
         .upcoming-events {
-            background-color: #f0f0f0; /* Light background */
+            background-color: #f0f0f0;
             text-align: center;
             padding: 50px 20px;
         }
@@ -61,14 +61,41 @@
             margin-bottom: 30px;
         }
         .upcoming-events .btn {
-            background-color: #003366; /* Dark blue button color */
+            background-color: #003366;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
         }
         .upcoming-events .btn:hover {
-            background-color: #002244; /* Darker hover color */
+            background-color: #002244;
+        }
+
+        /* Admin Login Button Styling */
+        .admin-login-btn {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #007bff; /* Blue button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .admin-login-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .admin-logout-btn {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #dc3545; /* Red button color for logout */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .admin-logout-btn:hover {
+            background-color: #c82333; /* Darker red on hover */
         }
     </style>
 </head>
@@ -87,6 +114,10 @@
                     <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- Admin Login/Logout Button -->
+                    <li class="nav-item">
+                        <div id="adminButton"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -119,14 +150,13 @@
                 </div>
             </div>
         </div>
+    </main>
 
-        </main>
-        
-        <div class="upcoming-events">
-            <h2>Upcoming Events</h2>
-            <p>Stay informed about our upcoming discussions, workshops, and networking events.</p>
-            <a href="events.html" class="btn">Browse Events →</a>
-        </div>
+    <div class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <p>Stay informed about our upcoming discussions, workshops, and networking events.</p>
+        <a href="events.html" class="btn">Browse Events →</a>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -156,11 +186,32 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 20 Economics Club. All rights reserved.</p>
+            <p>© 2025 Economics Club. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script>
+        // Check if admin is logged in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const adminButton = document.getElementById('adminButton');
+            const isAdminLoggedIn = sessionStorage.getItem('isAdminLoggedIn') === 'true';
+
+            if (isAdminLoggedIn) {
+                // Show logout button if logged in
+                adminButton.innerHTML = '<button class="admin-logout-btn" onclick="logout()">Logout</button>';
+            } else {
+                // Show login button if not logged in
+                adminButton.innerHTML = '<a href="login.html" class="admin-login-btn">Admin Login</a>';
+            }
+        });
+
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('isAdminLoggedIn');
+            window.location.reload(); // Refresh the page to show the login button again
+        }
+    </script>
 </body>
 </html>
