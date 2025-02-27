@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,4 +215,222 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Hatch Economics Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <style>
+        /* Existing footer styling */
+        .footer {
+            background-color: white;
+            padding: 20px;
+            text-align: left;
+            border-top: 1px solid #eee;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1;
+            padding: 0 10px;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+        .footer-section a {
+            text-decoration: none;
+            color: #333;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            color: #777;
+        }
+
+        /* Existing Upcoming Events styling */
+        .upcoming-events {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .upcoming-events h2 {
+            margin-bottom: 20px;
+        }
+        .upcoming-events p {
+            margin-bottom: 30px;
+        }
+        .upcoming-events .btn {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .upcoming-events .btn:hover {
+            background-color: #002244;
+        }
+
+        /* Admin Login Button Styling */
+        .admin-login-btn {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #007bff; /* Blue button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .admin-login-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .admin-logout-btn {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: #dc3545; /* Red button color for logout */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .admin-logout-btn:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fas fa-chart-line me-2"></i>West Hatch Economics Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- Admin Login/Logout Button -->
+                    <li class="nav-item">
+                        <div id="adminButton"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-4">Welcome to the West Hatch Economics Club</h1>
+            <p class="lead mb-4">Discover the world of economics through discussions, competitions, and real-world case studies. We explore financial trends, economic policies, and decision-making beyond the A-Level curriculum.</p>
+            <a href="events.html" class="btn btn-primary btn-lg">View Events <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="row mt-5 g-4">
+            <div class="col-md-6">
+                <div class="feature-card p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-calendar-alt fa-2x me-3"></i>
+                        <h3 class="mb-0">Regular Events</h3>
+                    </div>
+                    <p>Attend workshops, seminars, and discussions on economic topics.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-users fa-2x me-3"></i>
+                        <h3 class="mb-0">Community</h3>
+                    </div>
+                    <p>Connect with fellow students passionate about economics.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <p>Stay informed about our upcoming discussions, workshops, and networking events.</p>
+        <a href="events.html" class="btn">Browse Events →</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Economics Club</h3>
+                <p>Fostering economic understanding and discourse in our community.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="#"><img src="linkedin-icon.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><a href="mailto:contact@economicsclub.org">contact@economicsclub.org</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Economics Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+        // Check if admin is logged in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const adminButton = document.getElementById('adminButton');
+            const isAdminLoggedIn = sessionStorage.getItem('isAdminLoggedIn') === 'true';
+
+            if (isAdminLoggedIn) {
+                // Show logout button if logged in
+                adminButton.innerHTML = '<button class="admin-logout-btn" onclick="logout()">Logout</button>';
+            } else {
+                // Show login button if not logged in
+                adminButton.innerHTML = '<a href="login.html" class="admin-login-btn">Admin Login</a>';
+            }
+        });
+
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('isAdminLoggedIn');
+            window.location.reload(); // Refresh the page to show the login button again
+        }
+    </script>
+</body>
+>>>>>>> 2eae482 (added a admin section to most pages)
 </html>
